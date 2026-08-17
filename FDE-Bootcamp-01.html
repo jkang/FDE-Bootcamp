@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FDE Bootcamp - 理需求</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         /* CSS reset & variables */
         :root {
@@ -555,6 +556,26 @@
             color: #666666;
             font-weight: 600;
         }
+
+        /* Markdown Rendering Styles */
+        .markdown-render h1, .markdown-render h2, .markdown-render h3 {
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: #111111;
+        }
+        .markdown-render h1 { font-size: 1.4em; border-bottom: 1px solid #eeeeee; padding-bottom: 8px; }
+        .markdown-render h2 { font-size: 1.25em; }
+        .markdown-render h3 { font-size: 1.1em; }
+        .markdown-render p { margin-bottom: 12px; }
+        .markdown-render ul, .markdown-render ol { margin-bottom: 16px; padding-left: 20px; }
+        .markdown-render li { margin-bottom: 6px; position: relative; list-style-type: disc; padding-left: 0; }
+        .markdown-render li::before { display: none !important; }
+        .markdown-render strong { font-weight: 700; color: #111111; }
+        .markdown-render blockquote { border-left: 4px solid #dddddd; padding-left: 16px; color: #666666; font-style: italic; margin-bottom: 16px; }
+        .markdown-render table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 13px; }
+        .markdown-render th, .markdown-render td { border: 1px solid #eeeeee; padding: 8px 12px; text-align: left; }
+        .markdown-render th { background-color: #f5f5f5; font-weight: 600; }
     </style>
 </head>
 <body>
@@ -567,7 +588,7 @@
             
             <li class="nav-group-title">1. 客户研究</li>
             <li><a href="#research-1" class="nav-sub-item" onclick="switchTab('research-1')">1.1 确定公司主体</a></li>
-            <li><a href="#research-2" class="nav-sub-item" onclick="switchTab('research-2')">1.2 初步客户画像</a></li>
+            <li><a href="#research-2" class="nav-sub-item" onclick="switchTab('research-2')">1.2 企业画像</a></li>
             <li><a href="#research-3" class="nav-sub-item" onclick="switchTab('research-3')">1.3 商业模式与价值流</a></li>
             
             <li class="nav-group-title">2. 场景发现</li>
@@ -643,7 +664,7 @@
                                     </div>
                                     <div class="summary-card">
                                         <span class="summary-label">关键产出</span>
-                                        <div class="summary-text">客户画像、商业模式、关键价值流、业务主线流程模型</div>
+                                        <div class="summary-text">企业画像、商业模式、关键价值流、业务主线流程模型</div>
                                     </div>
                                 </div>
                                 <div class="flow-activities">
@@ -668,7 +689,7 @@
                                     </div>
                                     <div class="activity-card">
                                         <div class="activity-header">
-                                            <div class="activity-title">初步客户画像</div>
+                                            <div class="activity-title">企业画像</div>
                                             <div class="activity-tag tag-desk">借助 AgentOS 桌研</div>
                                         </div>
                                         <div class="activity-detail"><strong>目的：</strong>对客户企业有个整体了解，识别关键角色、业务定位 and 需求背景</div>
@@ -679,7 +700,7 @@
                                             </div>
                                             <div class="io-row">
                                                 <div class="io-label">输出</div>
-                                                <div class="io-content">客户画像 PPT</div>
+                                                <div class="io-content">企业画像 PPT</div>
                                             </div>
                                         </div>
                                         <a href="#" class="view-example-btn" onclick="switchTab('research-2')">查看输出示例</a>
@@ -731,7 +752,7 @@
                                         <div class="io-container">
                                             <div class="io-row">
                                                 <div class="io-label">输入</div>
-                                                <div class="io-content">商机需求、初步画像</div>
+                                                <div class="io-content">商机需求、企业画像</div>
                                             </div>
                                             <div class="io-row">
                                                 <div class="io-label">输出</div>
@@ -954,7 +975,7 @@
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">伊利奶粉事业部的分仓补货业务，覆盖从生产工厂、基地仓、销售分仓，到线上线下渠道客户的供应链补货链路。
+                    <div class="markdown-render" style="color: #1a3673;">伊利奶粉事业部的分仓补货业务，覆盖从生产工厂、基地仓、销售分仓，到线上线下渠道客户的供应链补货链路。
 整体链路可以概括为：
 工厂 / 基地仓 → 销售分仓 → 电商及经销商 → 终端客户
 
@@ -968,11 +989,11 @@
 其中，基地仓包括天津基地仓、呼市基地仓、杜蒙基地仓、武汉基地仓等；销售分仓包括合肥、天津、广州、郑州、成都、武汉、呼市、济南、柳州等销售仓。
 
 **组织边界**
-- 组织范围：伊利奶粉事业部
-- 业务范围：伊利奶粉事业部所属生产工厂到各分仓的补货业务
-- 商品范围：伊利奶粉事业部经营的所有在售商品，不包含促销品及礼盒
-- 覆盖供应链网络节点：工厂仓、区域分仓
-- 渠道范围：线上电商、线下经销商</div>
+- **组织范围**：伊利奶粉事业部
+- **业务范围**：伊利奶粉事业部所属生产工厂到各分仓的补货业务
+- **商品范围**：伊利奶粉事业部经营的所有在售商品，不包含促销品及礼盒
+- **覆盖供应链网络节点**：工厂仓、区域分仓
+- **渠道范围**：线上电商、线下经销商</div>
                 </div>
 
                 <h3>实践提示</h3>
@@ -982,52 +1003,52 @@
             </div>
         </div>
 
-        <!-- 客户研究：初步客户画像 -->
+        <!-- 客户研究：企业画像 -->
         <div id="research-2" class="section">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                <h1 class="section-title" style="margin-bottom: 0;">1.2 初步客户画像</h1>
+                <h1 class="section-title" style="margin-bottom: 0;">1.2 企业画像</h1>
                 <span class="time-badge">5 分钟</span>
             </div>
             
             <div class="content-block">
                 <ul class="activity-info">
-                    <li><strong>WHAT：</strong>识别决策链上的关键角色 (Stakeholders) 及其关注的核心 KPI</li>
-                    <li><strong>WHY：</strong>制定差异化的沟通话术，识别谁是项目的“买单者” (Sponsor) 和“受益者” (User)</li>
-                    <li><strong>工具：</strong>LinkedIn、AgentOS 访谈聚类、利益相关者矩阵</li>
+                    <li><strong>WHAT：</strong>建立对客户企业的全方位认知，包含企业基座、组织规模、业务组合、数字化成熟度、战略痛点及决策链</li>
+                    <li><strong>WHY：</strong>将模糊的商机背景具象化，识别业务增长引擎与数字化 Gap，为后续场景拆解提供战略依据</li>
+                    <li><strong>工具：</strong>AgentOS 企业画像 Agent、财报库、行业研报、LinkedIn</li>
                 </ul>
 
                 <h3>实操指南 (HOW)</h3>
                 <p>
-                    通过 LinkedIn 或企业内网识别决策链上的关键岗位，如 CIO、销售运营总监、提案中心负责人等。利用 AgentOS 整理这些干系人的公开访谈、社交媒体动态或行业演讲，识别其对 AI 技术的态度（是激进派还是稳健派）。构建“利益相关者矩阵”，将干系人按“影响力”和“利益相关度”进行分类。你需要为每个角色准备不同的“诱饵”：对 Sponsor 谈 ROI 和战略转型，对业务负责人谈效率提升和风险规避，对终端用户谈“AI 替你加班”。
+                    基于 FDE 提供的商机初步信息，利用 AgentOS 叠加公开财报、行业数据及媒体报道，构建结构化的企业认知。重点分析企业的核心增长曲线（如伊利的奶粉业务）及其毛利表现，识别该业务在集团内的战略地位。通过对现有数字化底座（如 APS、ERP、BI）的盘点，找出“点级智能”与“体系级计划”之间的 Gap。同时，初步推断决策链上的五类角色（Sponsor、决策者、评估者、使用者、影响者）及其核心关切。这一步的目标是形成一份“可判断、可对齐、可支撑下游拆解”的企业认知初稿。
                 </p>
 
                 <h3>产出</h3>
-                <p>关键干系人画像与利益矩阵（识别决策者、支持者、反对者及其核心诉求）</p>
+                <p>企业画像报告（包含企业基座、业务结构、数字化现状及战略痛点）</p>
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 伊利奶粉事业部 · 企业画像初稿
+                    <div class="markdown-render" style="color: #1a3673;"># 伊利奶粉事业部 · 企业画像初稿
 
 **1 总览**
 奶粉是伊利集团第二增长曲线——2024年营收 296.75 亿元。商机要解决的「分仓补货计划」，正是这条高毛利增长曲线里连接生产、仓储、渠道的枢纽环节，目前仍以人工 Excel 推式分货为主。
 
 **2 企业基座**
-- 法定全称：内蒙古伊利实业集团股份有限公司
-- 董事长：潘刚
-- 全球地位：全球乳业五强，连续十二年亚洲乳业第一
+- **法定全称**：内蒙古伊利实业集团股份有限公司
+- **董事长**：潘刚
+- **全球地位**：全球乳业五强，连续十二年亚洲乳业第一
 
 **3 组织规模**
-- 集团 2024 营业总收入：1157.80 亿元
-- 奶粉及奶制品营收：296.75 亿元（同比 +7.53%）
+- **集团 2024 营业总收入**：1157.80 亿元
+- **奶粉及奶制品营收**：296.75 亿元（同比 +7.53%）
 
 **4 业务组合与收入结构**
-- 婴幼儿配方奶粉市占：17.3%，居行业第二
-- 成人奶粉市占：24%，稳居细分市场第一
-- 主要品牌：金领冠、欣活、托菲儿、塞纳牧、悠滋小羊、佳贝艾特
+- **婴幼儿配方奶粉市占**：17.3%，居行业第二
+- **成人奶粉市占**：24%，稳居细分市场第一
+- **主要品牌**：金领冠、欣活、托菲儿、塞纳牧、悠滋小羊、佳贝艾特
 
 **5 数字化成熟度**
-- 已有能力：APS 排产、云商系统、京东「一盘货」、阿里云 BI
-- 关键 Gap：贯穿“生产工厂 → 基地仓 → 销售分仓 → 全渠道”的端到端分仓补货计划，仍是人工 Excel 推式分货。
+- **已有能力**：APS 排产、云商系统、京东「一盘货」、阿里云 BI
+- **关键 Gap**：贯穿“生产工厂 → 基地仓 → 销售分仓 → 全渠道”的端到端分仓补货计划，仍是人工 Excel 推式分货。
 
 **6 战略痛点**
 1. 分货效率低（人工 Excel）
@@ -1039,7 +1060,7 @@
 
                 <h3>实践提示</h3>
                 <p>
-                    要识别出那个“最痛苦的人”，他将成为你在客户内部最坚定的盟友。调研时要特别留意那些“影子决策者”，比如某个资深的流程专家，他的反对意见可能比 CIO 更有杀伤力。
+                    不要只盯着“人”，要先看清“事”。在做企业画像时，优先通过公开财报识别出企业的“钱袋子”在哪里，这决定了项目的战略天花板。同时，要识别出决策链中那些掌握“否决权”的隐形角色，确保方案能够兼顾多方利益。
                 </p>
             </div>
         </div>
@@ -1149,7 +1170,7 @@
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 伊利奶粉事业部 · 业务现状全景图 (价值流)
+                    <div class="markdown-render" style="color: #1a3673;"># 伊利奶粉事业部 · 业务现状全景图 (价值流)
 
 **1 总览**
 把伊利奶粉事业部的端到端经营拆成 5 条价值流。聚焦范围落在两个连续段：价值流②「需求与供应计划」与价值流④「仓储物流与履约」。
@@ -1196,7 +1217,7 @@
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 伊利奶粉事业部 · 背景与场景沟通纪要
+                    <div class="markdown-render" style="color: #1a3673;"># 伊利奶粉事业部 · 背景与场景沟通纪要
 
 **1 业务现状与潜在问题**
 - **推式分货为主**：需求响应滞后，容易出现部分仓缺货、部分仓积压。
@@ -1320,7 +1341,7 @@
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 伊利奶粉事业部 · AI需求场景全景图
+                    <div class="markdown-render" style="color: #1a3673;"># 伊利奶粉事业部 · AI需求场景全景图
 
 **1 核心洞察**
 三个真AI业务Agent沿"需求预测→补货优化→调拨优化"因果链排布，A2「分仓智能补货」是核心P0。
@@ -1441,7 +1462,7 @@
 
                 <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 价值段「销售计划与需求预测」现状拆解
+                    <div class="markdown-render" style="color: #1a3673;"># 价值段「销售计划与需求预测」现状拆解
 
 **1 总览**
 本价值段是分仓补货计划的第一道防线。核心瓶颈是"需求输入颗粒度不足"：销售计划需人工整理、加工到分仓维度，且库存天数计算未考虑上下旬趋势。
@@ -1532,17 +1553,8 @@
                 <p>场景需求规格说明书 (SRP)（包含机会画布与 MoS 定义）</p>
 
                 <h3>产出示例</h3>
-                <div class="requirement-box">
-                    <p>定义 Ascentium 场景的 <strong>MoS</strong> 为：1. AI 生成初稿的“可用率” > 80%；2. 用户对 AI 建议的点击率 > 90%。这份画布成为了后续 Prompt 调试和 RAG 优化的核心基准</p>
-                    <div style="margin-top: 16px;">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=AI%20Opportunity%20Canvas%20template%2C%20structured%20form%20for%20AI%20projects%2C%20flat%20design&image_size=landscape_4_3" alt="场景画布示例" style="width: 100%; border: 1px solid #eeeeee;">
-                    </div>
-                    <a href="#" class="view-example-btn" onclick="event.preventDefault();">查看 AI 机会画布完整示例</a>
-                </div>
-
-                <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 分仓智能补货 · 场景定义画布 (SRP)
+                    <div class="markdown-render" style="color: #1a3673;"># 分仓智能补货 · 场景定义画布 (SRP)
 
 **1 场景基础信息**
 - **名称**：分仓智能补货
@@ -1594,17 +1606,8 @@
                 <p>高保真概念原型 Demo 与 To-be 用户旅程图</p>
 
                 <h3>产出示例</h3>
-                <div class="requirement-box">
-                    <p>展示 <strong>“智能提案侧边栏”</strong> 原型：当提案经理在 Word 中输入“客户需求”时，右侧 AI 自动弹出“建议引用的历史 SOW 片段”及“合规风险警示”。客户看到原型的瞬间就决定了立项</p>
-                    <div style="margin-top: 16px;">
-                        <img src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=High-fidelity%20UI%20prototype%20for%20AI%20assistant%20in%20a%20document%20editor%2C%20modern%20flat%20design&image_size=landscape_4_3" alt="原型表达示例" style="width: 100%; border: 1px solid #eeeeee;">
-                    </div>
-                    <a href="#" class="view-example-btn" onclick="event.preventDefault();">查看高保真概念原型交互 Demo</a>
-                </div>
-
-                <h3>产出示例</h3>
                 <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7;">
-                    <div style="color: #1a3673; font-size: 14px; line-height: 1.6; white-space: pre-wrap;"># 分仓智能补货 Agent 原型设计系统 (DESIGN.md)
+                    <div class="markdown-render" style="color: #1a3673;"># 分仓智能补货 Agent 原型设计系统 (DESIGN.md)
 
 **1. 视觉主题与气质**
 专业、克制、企业级 SaaS 气质。密度取向中高，信息密度重于动效。
@@ -1616,8 +1619,8 @@
 - **补货单下发与经验沉淀**：闭环执行并记录专家调整逻辑。
 
 **3. 交互原则**
-- ✅ HITL (人机共创)：任何补货单下发前必须经人工确认。
-- ✅ 可视即价值：Artifact 区域实时展示补货建议与库存模拟曲线。</div>
+- ✅ **HITL (人机共创)**：任何补货单下发前必须经人工确认。
+- ✅ **可视即价值**：Artifact 区域实时展示补货建议与库存模拟曲线。</div>
                     <a href="yilimilk/13-概念原型/preview.html" class="view-example-btn" target="_blank">查看智能分仓补货概念原型 Demo</a>
                 </div>
 
@@ -1704,6 +1707,20 @@
                 document.querySelector('.content').scrollTop = 0;
             }
         }
+
+        // Initialize Markdown Rendering
+        function renderMarkdown() {
+            document.querySelectorAll('.markdown-render').forEach(el => {
+                const rawContent = el.getAttribute('data-markdown') || el.textContent;
+                // Store raw content for potential re-rendering
+                if (!el.getAttribute('data-markdown')) {
+                    el.setAttribute('data-markdown', rawContent);
+                }
+                el.innerHTML = marked.parse(rawContent.trim());
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', renderMarkdown);
     </script>
 </body>
 </html>
