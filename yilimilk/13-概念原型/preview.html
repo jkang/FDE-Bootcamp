@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>分仓智能补货 Agent 原型 · 视觉预览</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+<div class="bg-amber-50 border-b border-amber-200 text-xs text-amber-900 px-4 py-2">
+  <span class="font-semibold">PROTOTYPE · 视觉预览</span>
+  <span class="text-amber-700">设计锚定：P3 中性默认（未锁定）</span>
+  <a href="index.html" class="ml-auto underline">← 返回索引</a>
+</div>
+<div class="max-w-4xl mx-auto px-6 py-10 space-y-8">
+  <h1 class="text-2xl font-semibold">视觉预览（DESIGN.md 落地）</h1>
+
+  <section>
+    <h2 class="section font-semibold text-base">Color Palette</h2>
+    <div class="grid grid-cols-4 gap-3 mt-3">
+      <div class="rounded-xl border border-slate-200 overflow-hidden"><div class="h-16" style="background:#4F46E5"></div><div class="text-xs p-2">accent.primary #4F46E5</div></div>
+      <div class="rounded-xl border border-slate-200 overflow-hidden"><div class="h-16" style="background:#10B981"></div><div class="text-xs p-2">success #10B981</div></div>
+      <div class="rounded-xl border border-slate-200 overflow-hidden"><div class="h-16" style="background:#F59E0B"></div><div class="text-xs p-2">warning #F59E0B</div></div>
+      <div class="rounded-xl border border-slate-200 overflow-hidden"><div class="h-16" style="background:#EF4444"></div><div class="text-xs p-2">danger #EF4444</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section font-semibold text-base">Typography</h2>
+    <div class="space-y-2 mt-3">
+      <div class="text-2xl font-semibold">Display 28/36/600 · 导航页标题</div>
+      <div class="text-lg font-semibold">Title 20/28/600 · 页面主标题</div>
+      <div class="text-base font-semibold">Section 16/24/600 · 分段标题</div>
+      <div class="text-sm">Body 14/22/400 · 正文、气泡文字</div>
+      <div class="text-xs text-slate-400">Caption 12/18/400 · 辅助文字、时间戳</div>
+      <div class="text-sm thinking">Mono 13/20/500 · Thinking 区、工具调用</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section font-semibold text-base">State Badge</h2>
+    <div class="flex gap-3 mt-3">
+      <span class="badge badge-idle">idle</span>
+      <span class="badge badge-thinking">thinking</span>
+      <span class="badge badge-tool">calling tool</span>
+      <span class="badge badge-human">awaiting human</span>
+      <span class="badge badge-error">error</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section font-semibold text-base">Chat Bubble / Tool Call / HITL</h2>
+    <div class="space-y-3 mt-3">
+      <div class="flex justify-end"><div class="bubble-user px-4 py-2 text-sm">用户气泡 · 右对齐</div></div>
+      <div class="bubble-agent px-4 py-2 text-sm">Agent 气泡 · 左对齐，白底描边</div>
+      <div class="tool-card px-3 py-2 text-xs flex items-center gap-2"><span>🔧</span><span class="font-mono font-semibold">正在调用 读取 OIP 监控报表</span></div>
+      <div class="hitl-banner px-3 py-3 text-sm"><div class="flex items-center gap-2 font-semibold text-amber-700"><span class="badge badge-human">待你确认</span>HITL 拦截</div><div class="mt-1 text-amber-900">是否接受南京向上海横向调拨 2,500 件？</div></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>

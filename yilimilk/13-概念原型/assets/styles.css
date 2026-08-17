@@ -1,0 +1,25 @@
+body { font-family: var(--font-sans); color: var(--color-text-primary); }
+.thinking { font-family: var(--font-mono); }
+.chat-msg { max-width: 76%; }
+.bubble-user { background: var(--color-accent-primary); color: #fff; border-radius: 14px 14px 4px 14px; }
+.bubble-agent { background: var(--color-surface-base); border: 1px solid var(--color-border); border-radius: 14px 14px 14px 4px; }
+.thinking-box { background: var(--color-thinking-bg); color: var(--color-thinking-text); border-radius: var(--radius-card); }
+.tool-card { background: var(--color-surface-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-card); }
+.cite-foot { color: var(--color-accent-primary); cursor: pointer; font-weight: 600; }
+.cite-pop { position: absolute; background: #fff; border: 1px solid var(--color-border); box-shadow: var(--shadow-2); border-radius: var(--radius-tag); padding: 8px 10px; font-size: 12px; z-index: 50; display: none; }
+.badge { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; }
+.badge-idle { background: #F1F5F9; color: #64748B; }
+.badge-thinking { background: var(--color-thinking-bg); color: var(--color-thinking-text); }
+.badge-tool { background: #EFF6FF; color: #2563EB; }
+.badge-human { background: #FEF3C7; color: #B45309; }
+.badge-error { background: #FEE2E2; color: #B91C1C; }
+.hitl-banner { background: #FFFBEB; border: 1px solid #FCD34D; border-radius: var(--radius-card); }
+.undo-toast { background: #0F172A; color: #fff; border-radius: var(--radius-button); }
+.artifact-empty { border: 2px dashed var(--color-border); color: var(--color-text-muted); }
+.tbl { width: 100%; border-collapse: collapse; font-size: 12px; }
+.tbl th { background: var(--color-surface-subtle); text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--color-border); font-weight: 600; }
+.tbl td { padding: 6px 8px; border-bottom: 1px solid var(--color-border); }
+.tag-red { background: #FEE2E2; color: #B91C1C; }
+.tag-yellow { background: #FEF3C7; color: #B45309; }
+.tag-blue { background: #DBEAFE; color: #1D4ED8; }
+.tag-green { background: #D1FAE5; color: #047857; }

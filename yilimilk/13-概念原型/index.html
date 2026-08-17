@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>分仓智能补货 Agent 原型 · 索引</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen">
+<div class="bg-amber-50 border-b border-amber-200 text-xs text-amber-900 px-4 py-2">
+  <span class="font-semibold">PROTOTYPE</span>
+  <span class="text-amber-700">设计锚定：P3 中性默认（未锁定）· 分仓智能补货 Agent</span>
+</div>
+<div class="max-w-5xl mx-auto px-6 py-10">
+  <h1 class="text-3xl font-semibold">分仓智能补货 · Agent 原型</h1>
+  <p class="text-slate-500 mt-2">把补调经理每天 9 点看 OIP 异常、凭经验改分配量、下发补货单，升级为「AgentOS 自动理解规则、给可解释建议，人只做确认/修正/驳回」。</p>
+  <div class="grid grid-cols-2 gap-4 mt-8">
+    <a href="moments/01-九点异常总览与缺口识别.html" class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md">
+      <div class="font-semibold">① 九点异常总览与缺口识别</div>
+      <div class="text-sm text-slate-500 mt-2">AI 一屏识别全国仓网谁缺货、谁积压，自动解释异常原因。</div>
+      <div class="text-xs text-slate-400 mt-3">对应 SRP 阶段 P1 · 演示 #1 流式 #2 工具调用 #7 出处引用 #8 状态徽章</div>
+    </a>
+    <a href="moments/02-分货方案推理与人工确认.html" class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md">
+      <div class="font-semibold">② 分货方案推理与人工确认</div>
+      <div class="text-sm text-slate-500 mt-2">多约束算分配量，北京正向补货 + 南京→上海横调，HITL 拦截确认。</div>
+      <div class="text-xs text-slate-400 mt-3">对应 SRP 阶段 P2 · 演示 #4 内联组件 #5 HITL #7 出处引用</div>
+    </a>
+    <a href="moments/03-事件驱动临时补调.html" class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md">
+      <div class="font-semibold">③ 事件驱动临时补调</div>
+      <div class="text-sm text-slate-500 mt-2">天津入库延期，Agent 自动重算来源仓，打破 routine 给组合方案。</div>
+      <div class="text-xs text-slate-400 mt-3">对应 SRP 阶段 P2（异常分支）· 演示 #2 #7 #9 错误态</div>
+    </a>
+    <a href="moments/04-补货单下发与经验沉淀.html" class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-md">
+      <div class="font-semibold">④ 补货单下发与经验沉淀</div>
+      <div class="text-sm text-slate-500 mt-2">一键生成补货单下发（可撤销），人工凑车修改沉淀为可复用规则。</div>
+      <div class="text-xs text-slate-400 mt-3">对应 SRP 阶段 P3-P5 · 演示 #6 撤销 #10 空态</div>
+    </a>
+  </div>
+  <div class="mt-8 text-sm text-slate-400"><a class="underline" href="preview.html">查看视觉预览 preview.html</a> · <a class="underline" href="DESIGN.md">查看设计系统 DESIGN.md</a></div>
+</div>
+</body>
+</html>
