@@ -575,36 +575,38 @@ ul ul {
 .practice-tips {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    gap: 1px;
     margin-top: 16px;
-    background-color: #fafafa;
+    background-color: #eeeeee; /* Border color for the gap */
     border: 1px solid #eeeeee;
-    padding: 24px;
 }
 
 .tips-do, .tips-dont {
     display: flex;
     flex-direction: column;
+    background-color: #ffffff;
+    padding: 24px;
 }
 
 .tips-do strong, .tips-dont strong {
-    display: block;
+    display: flex;
+    align-items: center;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    margin-bottom: 12px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid;
+    margin-bottom: 20px;
+    padding-left: 8px;
+    border-left: 3px solid;
 }
 
 .tips-do strong {
     color: #2e7d32;
-    border-bottom-color: #2e7d32;
+    border-left-color: #2e7d32;
 }
 
 .tips-dont strong {
     color: #c62828;
-    border-bottom-color: #c62828;
+    border-left-color: #c62828;
 }
 
 .tips-do ul, .tips-dont ul {
@@ -615,23 +617,29 @@ ul ul {
 
 .tips-do li, .tips-dont li {
     font-size: 13px !important;
-    margin-bottom: 10px !important;
-    line-height: 1.5 !important;
-    padding-left: 14px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.6 !important;
+    padding-left: 20px !important;
     position: relative !important;
+    color: #444444;
 }
 
 .tips-do li::before, .tips-dont li::before {
-    content: "•" !important;
+    content: "" !important;
     position: absolute !important;
     left: 0 !important;
-    top: 0 !important;
+    top: 8px !important;
+    width: 6px !important;
+    height: 6px !important;
+    border: 1px solid !important;
     background-color: transparent !important;
-    width: auto !important;
-    height: auto !important;
-    font-weight: bold !important;
 }
 
-.tips-do li::before { color: #2e7d32 !important; }
-.tips-dont li::before { color: #c62828 !important; }
+.tips-do li::before {
+    border-color: #2e7d32 !important;
+}
+
+.tips-dont li::before {
+    border-color: #c62828 !important;
+}
 
