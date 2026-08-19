@@ -37,6 +37,7 @@ body {
     flex-direction: column;
     flex-shrink: 0;
     padding-top: 20px;
+    overflow-y: auto;
 }
 
 .sidebar-header {
