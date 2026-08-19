@@ -1,0 +1,391 @@
+<!-- 场景定义：活动 1 需求目标与 KPI -->
+<div id="definition-1" class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 class="section-title" style="margin-bottom: 0;">3.1 需求目标与 KPI</h1>
+        <span class="time-badge">4 分钟</span>
+    </div>
+    
+    <div class="content-block">
+        <ul class="activity-info">
+            <li><strong>WHAT：</strong>将场景成效与客户的战略 KPI 进行强绑定，定义清晰的成功指标</li>
+            <li><strong>WHY：</strong>让 AI 的价值从“玄学”变成“数学”，为项目立项和 ROI 测算提供决策依据</li>
+            <li><strong>工具：</strong>OSM 模型、业务基准 (Baseline) 数据表</li>
+        </ul>
+
+        <h3>实操指南 (HOW)</h3>
+        <div style="margin-bottom: 12px;">
+            <span class="activity-tag tag-comm">活动类型：客户沟通</span>
+        </div>
+        <div class="markdown-render" style="color: var(--text-main);">
+**1. 从 AgentOS 衔接出沟通事项**
+- 基于 AgentOS 的价值预估，梳理出与高优场景相关的 2-3 个核心业务指标（如：人力成本、交付周期）。
+
+**2. 结合调研事项，准备沟通计划**
+- 与财务或销售运营部门预约沟通，目标是获取当前流程的基准数据 (Baseline)。
+- 准备好 OSM 模型 (Objective-Strategy-Measurement) 框架。
+
+**3. 如何沟通 (执行)**
+- **对齐 Baseline**：询问现状数据（例如“目前制作一份提案的平均周期是多少？”）。
+- **设定改进目标**：与业务负责人探讨 AI 介入后的合理“改进目标值”（如缩短周期 30%）。
+- **指标拆解**：将业务“北极星指标”拆解为 AI 的具体表现指标（如：检索准确率、初稿采纳率）。
+
+**4. 沟通注意事项**
+- ⚠️ KPI 必须是客户现有系统能统计出来的。如果你定义了一个系统无法监控的指标，那么在项目结束时，你将无法证明 AI 到底带来了多少价值。
+        </div>
+
+        <h3>产出</h3>
+        <p>成效指标 KPI 定义表（包含北极星指标与二级拆解指标）</p>
+
+        <h3>产出示例</h3>
+        <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7; border-radius: 0; box-shadow: none;">
+            <div class="markdown-render" style="color: #1a3673;">
+# 伊利奶粉事业部 · 分仓补货目标 KPI 体系
+
+最终目标：**四个提高、一个降低**
+
+| 目标 | 定义 | 对应经营指标 | 达成路径 |
+|---|---|---|---|
+| 提高分货效率 | 通过系统化规则和智能计算，减少人工整理 Excel、人工判断和跨部门反复沟通，提高基地仓到销售仓的分货效率 | 分货效率 | 系统化规则 + 智能计算 |
+| 提高分仓有货率 | 通过更准确的需求识别和更合理的补货计划，让各销售仓更及时地获得适配货源，减少区域性缺货 | 分仓有货率 | 需求识别 + 补货优化 |
+| 提高库存周转率 | 通过优化库存分布，减少货品在不合适仓库中沉淀，提高整体库存周转效率 | 库存周转率 | 库存分布优化 |
+| 提高新鲜度 | 补货计划兼顾库存数量与商品日期，减少临期、大日期库存风险，提高终端可售商品新鲜度 | 商品新鲜度 | 批次/效期管理 |
+| 降低跨仓履约 | 提前把货放在更接近真实需求的正确仓库，减少订单发生后再从其他仓补发或调拨 | 跨仓履约率 | 分仓库存配置准确性 |
+
+**降低跨仓履约的派生收益：** 降低额外物流成本、提升履约时效、改善客户体验、减少仓间被动协调。
+            </div>
+        </div>
+
+        <h3>实践提示</h3>
+        <p>
+            KPI 必须是客户现有系统能统计出来的。如果你定义了一个系统无法监控的指标，那么在项目结束时，你将无法证明 AI 到底带来了多少价值。确保指标的可追溯性。
+        </p>
+    </div>
+</div>
+
+<!-- 场景定义：活动 2 业务动作识别 -->
+<div id="definition-2" class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 class="section-title" style="margin-bottom: 0;">3.2 业务动作识别</h1>
+        <span class="time-badge">6 分钟</span>
+    </div>
+    
+    <div class="content-block">
+        <ul class="activity-info">
+            <li><strong>WHAT：</strong>拆解 AI 介入后，人与 AI 交互的具体业务动作序列</li>
+            <li><strong>WHY：</strong>识别数据输入的来源、AI 处理的逻辑断点以及人工复核的心理阈值</li>
+            <li><strong>工具：</strong>原子动作分解模板、人机协作边界图</li>
+        </ul>
+
+        <h3>实操指南 (HOW)</h3>
+        <div style="margin-bottom: 12px;">
+            <span class="activity-tag tag-desk">活动类型：AgentOS 桌研</span>
+        </div>
+        <div class="markdown-render" style="color: var(--text-main);">
+利用 AgentOS 的逻辑编排能力，拆解 To-be 流程的“原子动作序列”：
+1. **输入现状与目标**：将 As-is 流程和业务 KPI 输入 AgentOS。
+2. **生成原子动作**：让 AgentOS 拆解出人与 AI 交互的具体序列（用户上传什么？AI 提取什么？在哪里等待人工确认？）。
+3. **识别数据依赖**：通过 AgentOS 分析每个动作所需的上下文数据 (Context)。
+4. **划定人机边界**：明确哪些动作是 AI 建议，哪些是必须由人执行的终审决策。
+        </div>
+
+
+        <h3>产出</h3>
+        <p>To-be 业务动作序列图（标注人机协作断点与上下文需求）</p>
+
+        <h3>产出示例</h3>
+        <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7; border-radius: 0; box-shadow: none;">
+            <div class="markdown-render" style="color: #1a3673;">
+# 伊利奶粉事业部 · To-be 业务动作与 AI 角色定义
+
+基于 SLP 规划，我们将通过三个阶段的 AI Agent 部署，重构分仓补货的业务动作：
+
+### 1. 销售计划精细化 (A1) - [Co-pilot 模式]
+- **业务动作**：销售计划团队输入历史销售与广促计划 -> AI 自动执行时序预测与多维特征拆解 -> AI 输出分仓维度需求预测建议 -> 计划员审核并修正。
+- **AI 角色**：预测辅助者，替代人工 Excel 拆解，提升输入精度。
+
+### 2. 分仓智能补货 (A2) - [HITL 模式]
+- **业务动作**：物流计划员触发补货计算 -> AI 聚合库存/在途/待检/效期数据 -> AI 执行多约束全局分配优化 -> AI 生成分货建议方案及解释逻辑 -> 计划员一键确认或局部微调。
+- **AI 角色**：决策建议者，在复杂约束下寻找全局最优解。
+
+### 3. 销售仓横向调拨 (A3) - [Autopilot/Closed-loop 模式]
+- **业务动作**：系统自动监控全网仓间平衡状态 -> AI 识别不平衡风险并生成调拨组合方案 -> AI 自动计算物流成本与有货率收益 -> 系统自动触发调拨指令或拦截高风险订单。
+- **AI 角色**：动态纠偏者，实现仓间库存的实时再平衡。
+            </div>
+        </div>
+
+        <h3>实践提示</h3>
+        <p>
+            要特别关注“AI 搞不定怎么办”的 Fallback 逻辑。如果 AI 检索不到匹配的条款，它是应该随便编一个，还是诚实地告诉用户“未找到，请手动编写”？这直接决定了用户对系统的信任度。
+        </p>
+    </div>
+</div>
+
+<!-- 场景定义：活动 3 数据知识探查 -->
+<div id="definition-3" class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 class="section-title" style="margin-bottom: 0;">3.3 数据知识探查</h1>
+        <span class="time-badge">7 分钟</span>
+    </div>
+    
+    <div class="content-block">
+        <ul class="activity-info">
+            <li><strong>WHAT：</strong>识别支撑 AI 场景所需的原始数据源、知识文档及数据质量评估</li>
+            <li><strong>WHY：</strong>数据是 AI 的燃料，提前探查数据分布和质量，决定了 RAG 检索的准确率和 Agent 的执行边界</li>
+            <li><strong>工具：</strong>数据资产清单模板、AgentOS 样本初筛工具</li>
+        </ul>
+
+        <h3>实操指南 (HOW)</h3>
+        <div style="margin-bottom: 12px;">
+            <span class="activity-tag tag-desk">活动类型：AgentOS 桌研</span>
+        </div>
+        <div class="markdown-render" style="color: var(--text-main);">
+利用 AgentOS 的数据探索能力，全面评估业务知识资产：
+1. **构建知识地图**：通过 AgentOS 梳理出支撑业务动作所需的数据分布在哪些孤岛（如 SharePoint, Salesforce, Wiki）。
+2. **自动化样本初筛**：抽取 10-20 份历史文档（如 SOW 或计划表），利用 AgentOS 进行自动化清洗与结构化解析，评估数据“噪声比”。
+3. **权限与合规扫描**：在 AgentOS 中推演数据权限边界，确认未来 AI Agent 是否具备合法且通畅的访问路径。
+4. **输出治理建议**：如果原始数据质量极差，则利用 AgentOS 生成“知识治理”建议报告，防止“垃圾进，垃圾出”。
+        </div>
+
+        <h3>产出</h3>
+        <p>数据质量与权限探查报告（包含知识分布地图与样本质量评估）</p>
+
+        <h3>产出示例</h3>
+        <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7; border-radius: 0; box-shadow: none;">
+            <div class="markdown-render" style="color: #1a3673;">
+# 伊利奶粉事业部 · 数据资产就绪度评估 (Data Readiness)
+
+| 业务 Agent | 核心数据需求 | 数据就绪度 | 探查结论与风险 | 技术可行性 |
+|---|---|---|---|---|
+| **A1 销售计划精细化** | 历史销售计划、实际销售数据、广促活动日历、分仓映射表 | **B** | 历史数据存在但分散在多个 Excel 报表中，口径需统一清洗。 | 高（成熟时序模型） |
+| **A2 分仓智能补货** | 基地仓/销售仓实时库存、在途订单、待检/合格批次、新鲜度/效期数据、促销配额 | **B** | 关键的待检与在途数据当前经由 Excel 手工传递，需通过接口或系统化整合实现准实时调用。 | 中（需整合 OR 算法） |
+| **A3 销售仓横向调拨** | 仓间距离/运输成本矩阵、各销售分仓实时库存结构、调拨历史记录 | **C** | 仓间实时库存与运费数据底座薄弱，需补建数字化底座。 | 中（依赖数据补建） |
+
+**关键结论：**
+项目初期需重点攻克“分仓维度需求数据”与“仓网库存状态数据”的标准化，建立统一的数据总线，为 Agent 提供高质量的决策燃料。
+            </div>
+        </div>
+
+        <h3>实践提示</h3>
+        <p>
+            不要相信客户说的“我们数据很干净”。一定要亲自打开几份文档看一看。RAG 系统的上限不在模型，而在你喂给它的知识质量。宁可数据量少，也要保证每一条知识都是准确且时效性强的。
+        </p>
+    </div>
+</div>
+
+<!-- 场景定义：活动 4 场景画布与指标 -->
+<div id="definition-4" class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 class="section-title" style="margin-bottom: 0;">3.4 场景画布与指标</h1>
+        <span class="time-badge">5 分钟</span>
+    </div>
+    
+    <div class="content-block">
+        <ul class="activity-info">
+            <li><strong>WHAT：</strong>使用结构化模板 (AI Opportunity Canvas) 定义场景全貌，并确定 MoS 指标</li>
+            <li><strong>WHY：</strong>产出场景需求规格说明书 (SRP)，作为后续 AI 研发和 Prompt 工程的唯一输入标准</li>
+            <li><strong>工具：</strong>AI Opportunity Canvas、MoS 指标体系</li>
+        </ul>
+
+        <h3>实操指南 (HOW)</h3>
+        <div style="margin-bottom: 12px;">
+            <span class="activity-tag tag-co-create">活动类型：客户共创</span>
+        </div>
+        <div class="markdown-render" style="color: var(--text-main);">
+**1. 共创 Agenda**
+- 第一部分（10min）：回顾已确认的业务蓝图与 KPI。
+- 第二部分（30min）：填写 AI Opportunity Canvas。
+- 第三部分（20min）：推演成功度指标 (MoS)。
+
+**2. 共创准备**
+- 打印或准备在线白板的“AI 机会画布 (AI Opportunity Canvas)”。
+- 邀请业务负责人、一线操作人员与客户 IT 代表共同参与。
+
+**3. 共创过程 Facilitate**
+- **引导填写画布**：引导客户共同定义五个核心要素：输入数据（用户提供什么）、模型任务（AI 做什么）、输出格式（结构化 JSON 还是 Word）、用户交互（界面在哪里）以及业务价值。
+- **推演技术指标**：将业务 KPI 转化为技术维度的“成功度指标 (MoS)”，如 AI 生成内容的采纳率 (Acceptance Rate)、幻觉率容忍度等。
+
+**4. 如何得出共创结论**
+- FDE 现场梳理并总结画布内容，确保逻辑自洽（如：输入数据能否支撑模型任务的实现？）。
+- 最终产出由客户签字确认的场景需求规格说明书 (SRP)，作为后续研发的“作战手册”。
+        </div>
+
+        <h3>产出</h3>
+        <p>场景需求规格说明书 (SRP)（包含机会画布与 MoS 定义）</p>
+
+        <h3>产出示例</h3>
+        <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7; border-radius: 0; box-shadow: none;">
+            <div class="markdown-render" style="color: #1a3673;">
+# 伊利奶粉事业部 · 分仓智能补货场景定义画布 (SRP)
+
+> **场景编号：** A2 | **优先级：** P0 | **落地阶段：** 🟢 阶段2 · 深化
+
+### 1. 场景基础信息
+- **名称**：分仓智能补货
+- **面向角色**：物流计划、调度组
+- **痛点锚定**：人工 Excel 推式分货，多仓×多 SKU×多约束（库存/在途/待检/效期/促销）无法全局最优。
+
+### 2. AI 机会点定义
+- **AI 任务**：多约束库存分配优化 (OR/运筹优化)。
+- **AI 角色**：物流计划员的智能调度助手 (HITL 模式)。
+- **业务价值**：提升分货效率、有货率、周转率与新鲜度（四个提高主体）。
+
+### 3. 成功度指标 (MoS)
+- **采纳率**：AI 生成的分货建议方案，人工审核通过率 > 85%。
+- **准确度**：补货预测建议量与实际订单执行量的偏离度 < 8%。
+- **时效性**：单次分货计划编制时间从 4 小时缩减至 15 分钟以内。
+
+### 4. 数据知识探查结论
+- **数据源**：订单中台 (多渠道订单)、WMS (实时库存/效期)、促销系统 (广促品配额)。
+- **就绪度**：B (需整合待检与在途库存的实时接口)。
+- **技术可行性**：中 (成熟运筹算法 + 规则引擎集成)。
+            </div>
+        </div>
+
+        <h3>实践提示</h3>
+        <p>
+            MoS 指标要尽量客观。与其问用户“你觉得 AI 写得好吗”，不如统计“用户在 AI 生成的内容上修改了多少个字符”。用客观的行为指标来衡量 AI 的表现。
+        </p>
+    </div>
+</div>
+
+<!-- 场景定义：活动 5 旅程设计与原型 -->
+<div id="definition-5" class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h1 class="section-title" style="margin-bottom: 0;">3.5 旅程设计与原型</h1>
+        <span class="time-badge">6 分钟</span>
+    </div>
+    
+    <div class="content-block">
+        <ul class="activity-info">
+            <li><strong>WHAT：</strong>绘制未来数字化的用户旅程，并制作高保真概念原型 (Prototype)</li>
+            <li><strong>WHY：</strong>实现“可视即价值”，锁定客户的交付预期，提前在低成本阶段识别交互风险</li>
+            <li><strong>工具：</strong>Figma、低代码原型工具、As-is/To-be 对比图</li>
+        </ul>
+
+        <h3>实操指南 (HOW)</h3>
+        <div style="margin-bottom: 12px;">
+            <span class="activity-tag tag-co-create">活动类型：客户共创</span>
+        </div>
+        <div class="markdown-render" style="color: var(--text-main);">
+**1. 共创 Agenda**
+- 第一部分（15min）：展示基于 As-is 简化的 To-be 旅程草图。
+- 第二部分（30min）：基于草图共创原型线框。
+- 第三部分（15min）：对齐交互逻辑，锁定交付预期。
+
+**2. 共创准备**
+- 提前准备好白板或低代码原型工具，以及现状 As-is 流程图。
+- 确保关键的用户代表（一线使用者）在场。
+
+**3. 共创过程 Facilitate**
+- **To-be 旅程推演**：带领客户走查未来数字化的用户旅程，确认哪些繁琐的步骤被消减。
+- **画草图/原型**：在白板上或使用低代码工具，与客户共同勾勒出界面的核心元素（AI 按钮在哪里？AI 建议如何弹出？修改后的内容如何回填？）。
+- **原型走查**：让业务人员在草图或低保真原型上“走查”真实业务流程，暴露潜在的交互盲区。
+
+**4. 如何得出共创结论**
+- 根据走查反馈，FDE 在现场修正原型逻辑。
+- 确认“可视即价值”的原型方案（哪怕是高保真图纸），让客户签字确认，锁定最终的开发预期。
+        </div>
+
+        <h3>产出</h3>
+        <p>高保真概念原型 Demo 与 To-be 用户旅程图</p>
+
+        <h3>产出示例</h3>
+        <div class="requirement-box" style="border-left-color: #2f5bd3; background-color: #f5f8ff; border-top-color: #d0d7e7; border-right-color: #d0d7e7; border-bottom-color: #d0d7e7; border-radius: 0; box-shadow: none;">
+            <div class="markdown-render" style="color: #1a3673;">
+# DESIGN.md · 分仓智能补货 Agent 原型设计系统
+
+> **锚定优先级：** P3 中性默认
+> **锚定来源：** 无（FDE 未提供客户品牌规范/参照物，暂用中性占位）
+> **版本：** v1.0 | **更新日期：** 2026-08-16
+> **锁定状态：** ⚠️ 未锁定（兜底）
+
+> ⚠️ **本 DESIGN.md 处于未锁定状态。** 所有 token 为中性占位，客户 / FDE 规范确认后必须覆盖，HTML 原型会通过替换 `assets/tokens.css` 一键切换而无需重做页面。
+
+## 1. Visual Theme & Atmosphere（视觉主题与气质）
+
+- **一句话气质：** 专业、克制、企业级 SaaS 气质，偏供应链计划工作台
+- **密度取向：** 中高（分货数据密集，信息密度重于动效）
+- **光影取向：** 浅色为主，阴影极少，依赖描边分层
+- **Agentic 特质强调：** Thinking 区与正文视觉差异化；Tool Call 有独立卡片；HITL 触发有显式强提示
+- **参考气质：** 企业级 SaaS 中性（Tailwind slate + indigo）
+
+## 2. Color Palette & Roles（颜色调色板与语义角色）
+
+| 语义名 | Hex | Tailwind 近似 | 用途 |
+|---|---|---|---|
+| color.accent.primary | #4F46E5 | indigo-600 | 主按钮、关键链接、Agent 头像 |
+| color.accent.muted | #EEF2FF | indigo-50 | 主色背景弱化 |
+| color.success | #10B981 | emerald-500 | 成功状态、在线指示 |
+| color.warning | #F59E0B | amber-500 | HITL 待确认、中风险 |
+| color.danger | #EF4444 | red-500 | 错误、破坏性动作 |
+| color.text.primary | #0F172A | slate-900 | 正文主文字 |
+| color.text.secondary | #475569 | slate-600 | 辅助文字 |
+| color.text.muted | #94A3B8 | slate-400 | 占位/提示 |
+| color.border | #E2E8F0 | slate-200 | 常规描边 |
+| color.surface.base | #FFFFFF | white | 主要表面 |
+| color.surface.subtle | #F8FAFC | slate-50 | 次要表面 |
+| color.thinking.bg | #F5F3FF | violet-50 | Agent 思考区背景 |
+| color.thinking.text | #6D28D9 | violet-700 | Agent 思考区文字 |
+
+## 3. Typography Rules（字体规则）
+
+| 级别 | 字号/行高/字重 | 用途 | 字体 |
+|---|---|---|---|
+| display | 28/36/600 | 导航页标题 | Inter 600 |
+| title | 20/28/600 | 页面主标题、Artifact 标题 | Inter 600 |
+| section | 16/24/600 | 分段标题 | Inter 600 |
+| body | 14/22/400 | 正文、气泡文字 | Inter 400 |
+| caption | 12/18/400 | 辅助文字、徽章、时间戳 | Inter 400 |
+| mono | 13/20/500 | Thinking 区、工具调用 | SF Mono/ui-monospace |
+
+- **字体族：** Inter + 系统等宽
+- **字重用法：** 400/500/600 三档
+
+## 4. Component Stylings（组件样式）
+
+- **Button：** primary(indigo)/secondary(白描边)/ghost/danger；圆角 10px
+- **Chat Bubble：** user 右对齐 indigo 底、agent 左对齐白底描边
+- **Tool Call Card：** 灰底、mono 字体、状态图标
+- **State Badge：** 药丸徽章（idle 灰/thinking 紫/tool_calling 蓝/awaiting_human 黄/error 红）
+- **HITL Banner：** amber 底 + 描边 + 「待你确认」徽章
+- **Citation Footnote：** 内联 [n] 脚标 + 悬浮来源卡
+- **Input Textarea：** 白底描边、圆角 10px
+
+## 5. Layout Principles（布局原则）
+
+- **三栏主布局：** 左 Shell 240px / 中 Conversation Pane 弹性 / 右 Artifact Pane 440px
+- **间距单位：** 4/8/12/16/20/24/32（禁用奇数 px）
+
+## 6. Depth & Elevation（深度与层级）
+
+- 阴影最多 3 级：shadow.0 / shadow.1 / shadow.2
+- 圆角：卡片 12px、按钮 10px、小标签 8px、徽章 999px
+
+## 7. Do's and Don'ts
+
+- ✅ 用描边分层，少用阴影；✅ 痛点/风险用 amber/red 强调，不用大面积色块；✅ HITL 强提示
+- ❌ 深色模式；❌ 大面积渐变/动效；❌ 硬编码魔术色（一律走 tokens.css）
+
+## 8. Responsive Behavior（响应式）
+
+- 原型阶段仅保证桌面（≥1280px）完美
+
+## 9. Agent Prompt Guide（给后续工程/AI 的快速上下文）
+
+```
+你是「分仓智能补货」Agent 产品中的分货方案助理，服务于伊利奶粉事业部物流计划岗。
+目标：在基地仓→销售仓分货补货场景下，通过多约束全局优化，提升分货效率、分仓有货率、周转率、新鲜度。
+职责：识别全仓网缺口、算优先级/备货率/分配量、生成补货单并校验、跟踪在途/入库、出复盘调参建议。
+约束：任何补货单下发前必须经人工确认；分配量偏离建议量需解释；不得脱离库存/在途/效期约束。
+语气：专业、克制、数字驱动。
+```
+            </div>
+            <a href="yilimilk/13-概念原型/preview.html" class="view-example-btn" target="_blank">查看智能分仓补货概念原型 Demo</a>
+        </div>
+
+        <h3>实践提示</h3>
+        <p>
+            在定义阶段投入 2 天做原型，能减少后期 20 天的无效沟通。不要追求原型的功能完备性，要追求“价值感的传达”。让客户在没写一行代码前就看到 AI 带来的未来。
+        </p>
+    </div>
+</div>
