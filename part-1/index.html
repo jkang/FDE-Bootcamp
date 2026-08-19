@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDE Bootcamp - 理需求 (SLP) 实操工作坊</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header" style="cursor: pointer;" onclick="switchTab('intro', event)">FDE Bootcamp</div>
+        
+        <nav class="nav-list">
+            <a href="../index.html" class="nav-item" style="color: #2f5bd3; font-weight: 600;">← 返回门户</a>
+            <div style="margin-top: 8px; border-bottom: 1px solid #eeeeee; margin-bottom: 8px;"></div>
+            
+            <a href="#intro" class="nav-item active" onclick="switchTab('intro', event)">课程导入</a>
+            
+            <div class="nav-group-title">阶段一：客户研究</div>
+            <a href="#research-1" class="nav-sub-item" onclick="switchTab('research-1', event)">1.1 行业与企业桌研</a>
+            <a href="#research-2" class="nav-sub-item" onclick="switchTab('research-2', event)">1.2 企业画像与假设</a>
+            <a href="#research-3" class="nav-sub-item" onclick="switchTab('research-3', event)">1.3 价值流地图初稿</a>
+            
+            <div class="nav-group-title">阶段二：场景发现</div>
+            <a href="#discovery-1" class="nav-sub-item" onclick="switchTab('discovery-1', event)">2.1 背景与场景沟通</a>
+            <a href="#discovery-2" class="nav-sub-item" onclick="switchTab('discovery-2', event)">2.2 流程建模</a>
+            <a href="#discovery-3" class="nav-sub-item" onclick="switchTab('discovery-3', event)">2.3 瓶颈与痛点推导</a>
+            <a href="#discovery-4" class="nav-sub-item" onclick="switchTab('discovery-4', event)">2.4 识别 AI 机会点</a>
+            <a href="#discovery-5" class="nav-sub-item" onclick="switchTab('discovery-5', event)">2.5 优先级评估</a>
+            
+            <div class="nav-group-title">阶段三：场景定义</div>
+            <a href="#definition-1" class="nav-sub-item" onclick="switchTab('definition-1', event)">3.1 需求目标与 KPI</a>
+            <a href="#definition-2" class="nav-sub-item" onclick="switchTab('definition-2', event)">3.2 业务动作识别</a>
+            <a href="#definition-3" class="nav-sub-item" onclick="switchTab('definition-3', event)">3.3 数据知识探查</a>
+            <a href="#definition-4" class="nav-sub-item" onclick="switchTab('definition-4', event)">3.4 场景画布与指标</a>
+            <a href="#definition-5" class="nav-sub-item" onclick="switchTab('definition-5', event)">3.5 旅程设计与原型</a>
+            
+            <div style="margin-top: 20px;"></div>
+            <a href="#summary" class="nav-item" onclick="switchTab('summary', event)">4. 总结与实操</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

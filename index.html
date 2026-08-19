@@ -3,45 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDE Bootcamp - 理需求 (SLP) 实操工作坊</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <title>FDE Bootcamp - 全链路实操课程</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #222222;
+            --text-muted: #777777;
+            --accent-color: #000000;
+            --border-color: #eeeeee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .sidebar {
+            width: 260px;
+            border-right: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+        }
+
+        .sidebar-header {
+            padding: 0 32px 40px;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-item {
+            padding: 16px 32px;
+            cursor: pointer;
+            color: var(--text-main);
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .nav-item:hover {
+            background-color: #f9f9f9;
+        }
+
+        .nav-item.active {
+            background-color: #f5f5f5;
+            font-weight: 600;
+            border-left-color: var(--accent-color);
+        }
+
+        .nav-item.disabled {
+            color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 80px 100px;
+            overflow-y: auto;
+        }
+
+        .welcome-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.04em;
+        }
+
+        .welcome-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 60px;
+        }
+
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 1000px;
+        }
+
+        .part-card {
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.2s;
+        }
+
+        .part-card:not(.disabled):hover {
+            border-color: var(--accent-color);
+        }
+
+        .part-card.disabled {
+            opacity: 0.6;
+            background-color: #fafafa;
+        }
+
+        .part-num {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .part-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .part-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .enter-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            width: fit-content;
+        }
+
+        .enter-btn.disabled {
+            background-color: #cccccc;
+            pointer-events: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            font-size: 10px;
+            font-weight: 700;
+            background-color: #f0f0f0;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="sidebar-header" style="cursor: pointer;" onclick="switchTab('intro', event)">FDE Bootcamp</div>
-        
+        <div class="sidebar-header">FDE Bootcamp</div>
         <nav class="nav-list">
-            <a href="#intro" class="nav-item active" onclick="switchTab('intro', event)">课程导入</a>
-            
-            <div class="nav-group-title">阶段一：客户研究</div>
-            <a href="#research-1" class="nav-sub-item" onclick="switchTab('research-1', event)">1.1 行业与企业桌研</a>
-            <a href="#research-2" class="nav-sub-item" onclick="switchTab('research-2', event)">1.2 企业画像与假设</a>
-            <a href="#research-3" class="nav-sub-item" onclick="switchTab('research-3', event)">1.3 价值流地图初稿</a>
-            
-            <div class="nav-group-title">阶段二：场景发现</div>
-            <a href="#discovery-1" class="nav-sub-item" onclick="switchTab('discovery-1', event)">2.1 背景与场景沟通</a>
-            <a href="#discovery-2" class="nav-sub-item" onclick="switchTab('discovery-2', event)">2.2 流程建模</a>
-            <a href="#discovery-3" class="nav-sub-item" onclick="switchTab('discovery-3', event)">2.3 瓶颈与痛点推导</a>
-            <a href="#discovery-4" class="nav-sub-item" onclick="switchTab('discovery-4', event)">2.4 识别 AI 机会点</a>
-            <a href="#discovery-5" class="nav-sub-item" onclick="switchTab('discovery-5', event)">2.5 优先级评估</a>
-            
-            <div class="nav-group-title">阶段三：场景定义</div>
-            <a href="#definition-1" class="nav-sub-item" onclick="switchTab('definition-1', event)">3.1 需求目标与 KPI</a>
-            <a href="#definition-2" class="nav-sub-item" onclick="switchTab('definition-2', event)">3.2 业务动作识别</a>
-            <a href="#definition-3" class="nav-sub-item" onclick="switchTab('definition-3', event)">3.3 数据知识探查</a>
-            <a href="#definition-4" class="nav-sub-item" onclick="switchTab('definition-4', event)">3.4 场景画布与指标</a>
-            <a href="#definition-5" class="nav-sub-item" onclick="switchTab('definition-5', event)">3.5 旅程设计与原型</a>
-            
-            <div style="margin-top: 20px;"></div>
-            <a href="#summary" class="nav-item" onclick="switchTab('summary', event)">4. 总结与实操</a>
+            <a href="#" class="nav-item active">课程总览</a>
+            <a href="part-1/index.html" class="nav-item">Part 1: 理需求 (SLP)</a>
+            <a href="#" class="nav-item disabled">Part 2: 挖知识</a>
+            <a href="#" class="nav-item disabled">Part 3: 建本体</a>
+            <a href="#" class="nav-item disabled">Part 4: 生智能</a>
         </nav>
     </div>
 
     <div class="content">
-        <!-- Content will be dynamically loaded here -->
-    </div>
+        <h1 class="welcome-title">FDE Bootcamp</h1>
+        <p class="welcome-subtitle">从商机到交付，全链路 AI 产品实操指南</p>
 
-    <script src="assets/script.js"></script>
+        <div class="parts-grid">
+            <!-- Part 1 -->
+            <div class="part-card">
+                <div class="part-num">Part 1</div>
+                <h2 class="part-title">理需求 (SLP)</h2>
+                <p class="part-desc">
+                    基于 SLP (Service Level Planning) 方法论，通过客户桌研、现场调研与共创，将模糊的商机需求转化为结构化的 AI 场景规划与 SRP。
+                </p>
+                <a href="part-1/index.html" class="enter-btn">进入课程</a>
+            </div>
+
+            <!-- Part 2 -->
+            <div class="part-card disabled">
+                <div class="badge">COMING SOON</div>
+                <div class="part-num">Part 2</div>
+                <h2 class="part-title">挖知识</h2>
+                <p class="part-desc">
+                    深入业务毛细血管，探查支撑 AI 场景所需的隐性知识、专家经验与数据分布，构建高质量的知识底座。
+                </p>
+                <a href="#" class="enter-btn disabled">敬请期待</a>
+            </div>
+
+            <!-- Part 3 -->
+            <div class="part-card disabled">
+                <div class="badge">COMING SOON</div>
+                <div class="part-num">Part 3</div>
+                <h2 class="part-title">建本体</h2>
+                <p class="part-desc">
+                    定义业务语义网，通过本体建模（Ontology）实现 AI 对复杂业务逻辑的深度理解与统一认知。
+                </p>
+                <a href="#" class="enter-btn disabled">敬请期待</a>
+            </div>
+
+            <!-- Part 4 -->
+            <div class="part-card disabled">
+                <div class="badge">COMING SOON</div>
+                <div class="part-num">Part 4</div>
+                <h2 class="part-title">生智能</h2>
+                <p class="part-desc">
+                    完成 Agent 组装与推理逻辑构建，实现从数据到洞察、从策略到执行的智能自动化闭环。
+                </p>
+                <a href="#" class="enter-btn disabled">敬请期待</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
