@@ -55,7 +55,7 @@ body {
 }
 
 .nav-item {
-    padding: 12px 24px;
+    padding: 8px 24px;
     cursor: pointer;
     color: var(--text-main);
     text-decoration: none;
@@ -85,7 +85,7 @@ body {
 }
 
 .nav-sub-item {
-    padding: 8px 24px 8px 40px;
+    padding: 6px 24px 6px 40px;
     cursor: pointer;
     color: var(--text-muted);
     text-decoration: none;
