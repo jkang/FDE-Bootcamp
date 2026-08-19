@@ -570,3 +570,68 @@ ul ul {
 .markdown-render table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 13px; }
 .markdown-render th, .markdown-render td { border: 1px solid #eeeeee; padding: 8px 12px; text-align: left; }
 .markdown-render th { background-color: #f5f5f5; font-weight: 600; }
+
+/* Practice Tips Dos & Don'ts */
+.practice-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 16px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    padding: 24px;
+}
+
+.tips-do, .tips-dont {
+    display: flex;
+    flex-direction: column;
+}
+
+.tips-do strong, .tips-dont strong {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+}
+
+.tips-do strong {
+    color: #2e7d32;
+    border-bottom-color: #2e7d32;
+}
+
+.tips-dont strong {
+    color: #c62828;
+    border-bottom-color: #c62828;
+}
+
+.tips-do ul, .tips-dont ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.tips-do li, .tips-dont li {
+    font-size: 13px !important;
+    margin-bottom: 10px !important;
+    line-height: 1.5 !important;
+    padding-left: 14px !important;
+    position: relative !important;
+}
+
+.tips-do li::before, .tips-dont li::before {
+    content: "•" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    background-color: transparent !important;
+    width: auto !important;
+    height: auto !important;
+    font-weight: bold !important;
+}
+
+.tips-do li::before { color: #2e7d32 !important; }
+.tips-dont li::before { color: #c62828 !important; }
+
